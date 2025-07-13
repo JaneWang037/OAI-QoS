@@ -4,7 +4,7 @@ services:
         privileged: true
         init: true
         container_name: ueransim-gnb
-        image: ueransim:v3.2.7-ubuntu
+        image: phinetech/ueransim:v3.2.6 
         command: nr-gnb -c /home/config-gnb.yaml
         volumes:
             - ./ran-qos/oai-cn5g-gnb.yaml:/home/config-gnb.yaml
@@ -16,8 +16,8 @@ services:
     ueransim-ue-5qi-1:
         privileged: true
         init: true
-        container_name: rosue1
-        image: ueransim-ue-5qi-1
+        container_name: ueransim-ue-5qi-1
+        image: phinetech/ueransim:v3.2.6
         cap_add:
         - NET_ADMIN
         - SYS_ADMIN
@@ -39,8 +39,8 @@ services:
     ueransim-ue-5qi-3:
         privileged: true
         init: true
-        container_name: rosserver
-        image: ueransim-ue-5qi-3
+        container_name: ueransim-ue-5qi-3
+        image: phinetech/ueransim:v3.2.6
         cap_add:
         - NET_ADMIN
         - SYS_ADMIN
@@ -62,8 +62,8 @@ services:
     ueransim-ue-5qi-4:
         privileged: true
         init: true
-        container_name: rosue2
-        image: ueransim-ue-5qi-4
+        container_name: ueransim-ue-5qi-4
+        image: phinetech/ueransim:v3.2.6
         cap_add:
         - NET_ADMIN
         - SYS_ADMIN
